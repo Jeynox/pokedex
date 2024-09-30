@@ -1,13 +1,12 @@
 import './style/App.css'
-import { PokemonCard } from './components/PokemonCard';
+import { PokemonCard, PokemonType } from './components/PokemonCard';
 
 
 function App() {
-  const pokemonList = [
+  const pokemons: PokemonType[] = [
     {
       name: "bulbasaur",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+      imgSrc:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
     },
     {
       name: "mew",
@@ -17,8 +16,8 @@ function App() {
     <section>
       <div>
         <PokemonCard 
-          name={pokemonList[0].name}
-          img={pokemonList[0].imgSrc}
+          name={pokemons[0].name}
+          imgSrc={pokemons[0].imgSrc}
         />
       </div>
     </section>
